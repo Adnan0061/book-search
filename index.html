@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/d142d599db.js" crossorigin="anonymous"></script>
+    <!-- tailwind link -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="text-center text-4xl font-bold">Search Your Book</h1>
+        
+    <!-- search area -->
+    <div class="flex justify-center my-10">
+        <input type="text" id="search-box" class="w-1/3 border rounded-l-full text-xl py-2 px-4 box-border focus:outline-none" placeholder="Book Name" aria-label="Recipient's username" aria-describedby="button-search">
+        <button onclick="loadBooks()" class="border rounded-r-full bg-blue-500 text-xl py-2 px-4 " type="button" id="button-search"><i class="fas fa-search text-white"></i></button>
+    </div>
+    <!-- Dynamic message (total/loading/write something) -->
+    <div class="text-center"
+    >
+        <h4 id="total-result"></h4>
+    </div>
+
+    <!-- search results -->
+    <div class="bg-white">
+        <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+            <h2 id="display-header" class="text-2xl font-bold tracking-tight text-gray-900 displ">Searched items</h2>
+        
+            <div id="books-container" class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- js link -->
+    <script src="script.js"></script>
+</body>
+</html>
